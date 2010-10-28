@@ -10,7 +10,7 @@ begin
 protect_via_honeypots creates some hidden fields. As normal users don't mess with hidden fields we can assume that when those fields are filled with data: a bot filled it.
 So when that happens, protect_via_honeypots throws an error (as the same way protect_from_forgery does)}
     gem.email = "roy@royapps.nl"
-    gem.homepage = "http://github.com/roy/hello-gem"
+    gem.homepage = "http://github.com/roy/protect_via_honeypots"
     gem.authors = ["Roy van der Meij"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings

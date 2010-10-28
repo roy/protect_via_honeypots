@@ -1,6 +1,7 @@
-require 'protect_via_honeypots/form_tag_helper_extensions'
 
 module ProtectViaHoneypots
+  HONEYPOT_TAGS = [:email_pot, :name_pot]
+
   def self.included(base)
     base.extend ClassMethods
   end
@@ -10,12 +11,10 @@ module ProtectViaHoneypots
       include InstanceMethods
 
       before_filter :verify_honeypots
-      ActionView::Helpers::FormTagHelper.include ProtectViaHoneypots::FormTagHelperExtensions
+      require 'protect_via_honeypots/form_tag_helper_extensions'
+      #ActionView::Helpers::FormTagHelper.send(:include, ProtectViaHoneypots::FormTagHelperExtensions)
     end
 
-    def honeypot_tags
-      [:email_pot, :name_pot]
-    end
   end
 
   module InstanceMethods
@@ -24,9 +23,8 @@ module ProtectViaHoneypots
     end
 
     def verified_request?
-      honeypot_tags.all?{ |x| params[x].blank? }
+       ProtectViaHoneypots::HONEYPOT_TAGS.all?{ |x| params[x].blank? }
     end
-
   end
 end
 

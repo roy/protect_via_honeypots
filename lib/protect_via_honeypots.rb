@@ -19,7 +19,7 @@ module ProtectViaHoneypots
 
   module InstanceMethods
     def verify_honeypots
-      verified_request? || raise (ActionController::InvalidHoneyPots)
+      verified_request? || raise(ActionController::InvalidHoneyPots)
     end
 
     def verified_request?

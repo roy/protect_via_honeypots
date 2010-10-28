@@ -1,0 +1,49 @@
+h1. protect_via_honeypots
+
+In the never ending battle with the form bots, here's my attempt to mislead them.
+protect_via_honeypots creates some hidden fields. As normal users don't mess with hidden fields we can assume that when those fields are filled with data: a bot filled it.
+So when that happens, protect_via_honeypots throws an error (as the same way protect_from_forgery does)
+
+h2. Installation
+
+Install the protect_via_honeypots gem:
+
+<pre>
+  sudo gem install protect_via_honeypots
+</pre>
+
+Add protect_via_honeypots in environment.rb as a gem dependency:
+
+<pre>
+  config.gem "protect_via_honeypots"
+</pre>
+
+Or place it in your Gemfile
+
+<pre>
+  gem "protect_via_honeypots"
+</pre>
+
+h2. Usage
+
+Place the following in your application_controller.rb
+
+<pre>
+  protect_via_honeypots
+</pre>
+
+And your done!
+
+h1. Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+h1. Copyright
+
+Copyright (c) 2010 Roy van der Meij. See LICENSE for details.

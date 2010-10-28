@@ -26,10 +26,10 @@ module ActionView
       alias_method :old_extra_tags_for_form, :extra_tags_for_form
       def extra_tags_for_form(html_options)
         tags = ProtectViaHoneypots::HONEYPOT_TAGS.collect do |tag| 
-          tag(:input, :type => "hidden", :name => tag, :value => "") 
+          tag(:input, :type => "text", :name => tag, :value => "") 
         end
 
-        old_extra_tags_for_form(html_options) + content_tag(:div, tags, :style => 'margin:0;padding:0;display:inline')
+        old_extra_tags_for_form(html_options) + content_tag(:div, tags, :style => 'margin:0;padding:0;display:none')
       end
 
     end

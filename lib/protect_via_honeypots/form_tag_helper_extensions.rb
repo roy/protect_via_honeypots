@@ -35,3 +35,8 @@ module ActionView
     end
   end
 end
+
+module ActionController #:nodoc:
+  class InvalidHoneyPots < ActionControllerError #:nodoc:
+  end
+end

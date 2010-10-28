@@ -4,9 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "hello-gem"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = "protect_via_honeypots"
+    gem.summary = %Q{Protect your apps for bots via honeypots}
+    gem.description = %Q{In the never ending battle with the form bots, here's my attempt to mislead them.
+protect_via_honeypots creates some hidden fields. As normal users don't mess with hidden fields we can assume that when those fields are filled with data: a bot filled it.
+So when that happens, protect_via_honeypots throws an error (as the same way protect_from_forgery does)}
     gem.email = "roy@royapps.nl"
     gem.homepage = "http://github.com/roy/hello-gem"
     gem.authors = ["Roy van der Meij"]
@@ -47,7 +49,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "hello-gem #{version}"
+  rdoc.title = "protect_via_honeypots #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

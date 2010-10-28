@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{protect_via_honeypots}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roy van der Meij"]
@@ -27,6 +27,8 @@ So when that happens, protect_via_honeypots throws an error (as the same way pro
      "init.rb",
      "lib/protect_via_honeypots.rb",
      "lib/protect_via_honeypots/form_tag_helper_extensions.rb",
+     "pkg/protect_via_honeypots-0.1.0.gem",
+     "protect_via_honeypots.gemspec",
      "test/helper.rb"
   ]
   s.homepage = %q{http://github.com/roy/hello-gem}

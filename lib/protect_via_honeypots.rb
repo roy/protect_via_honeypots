@@ -24,6 +24,6 @@ end
 
 
 # Set it all up
-if Object.const_defined?("ActiveController")
-  ActiveController::Base.send(:include, ProtectViaHoneypots)
+if Object.const_defined?("ActionController")
+  ActionController::Base.send(:include, ProtectViaHoneypots)
 end

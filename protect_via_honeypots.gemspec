@@ -28,6 +28,7 @@ So when that happens, protect_via_honeypots throws an error (as the same way pro
      "lib/protect_via_honeypots.rb",
      "lib/protect_via_honeypots/form_tag_helper_extensions.rb",
      "pkg/protect_via_honeypots-0.1.0.gem",
+     "pkg/protect_via_honeypots-0.1.1.gem",
      "protect_via_honeypots.gemspec",
      "test/helper.rb"
   ]

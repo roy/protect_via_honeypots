@@ -1,6 +1,6 @@
 
 module ProtectViaHoneypots
-  HONEYPOT_TAGS = [:email_pot, :name_pot]
+  HONEYPOT_TAGS = [:email, :name]
 
   def self.included(base)
     base.extend ClassMethods

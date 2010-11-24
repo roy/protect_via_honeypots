@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{protect_via_honeypots}
-  s.version = "0.1.3"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roy van der Meij"]
-  s.date = %q{2010-10-28}
+  s.date = %q{2010-11-24}
   s.description = %q{In the never ending battle with the form bots, here's my attempt to mislead them.
 protect_via_honeypots creates some hidden fields. As normal users don't mess with hidden fields we can assume that when those fields are filled with data: a bot filled it.
 So when that happens, protect_via_honeypots throws an error (as the same way protect_from_forgery does)}
@@ -30,6 +30,7 @@ So when that happens, protect_via_honeypots throws an error (as the same way pro
      "pkg/protect_via_honeypots-0.1.0.gem",
      "pkg/protect_via_honeypots-0.1.1.gem",
      "pkg/protect_via_honeypots-0.1.2.gem",
+     "pkg/protect_via_honeypots-0.1.3.gem",
      "protect_via_honeypots.gemspec",
      "test/helper.rb"
   ]
